@@ -43,13 +43,13 @@
     <text x="78" y="118" fill="#fb923c" font-size="19" font-weight="750" letter-spacing="3">ROBUST SPEAKER VERIFICATION</text>
     <text x="74" y="206" fill="#ffffff" font-size="72" font-weight="800" letter-spacing="-2">NoiseLoRA-SV</text>
     <text x="78" y="250" fill="#e9d5ff" font-size="25" font-weight="430">Hierarchical noise-conditioned adaptation</text>
-    <g font-size="16" font-weight="650">
-      <rect x="78" y="282" width="218" height="39" rx="19.5" fill="#ffffff" fill-opacity=".11" stroke="#ffffff" stroke-opacity=".18"/>
-      <text x="102" y="307" fill="#fff">INTERSPEECH 2026 · ORAL</text>
-      <rect x="310" y="282" width="196" height="39" rx="19.5" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee" stroke-opacity=".5"/>
-      <text x="338" y="307" fill="#a5f3fc">DYNAMIC LoRA</text>
-      <rect x="520" y="282" width="212" height="39" rx="19.5" fill="#fb923c" fill-opacity=".12" stroke="#fb923c" stroke-opacity=".5"/>
-      <text x="548" y="307" fill="#fed7aa">DISTILLATION</text>
+    <g font-size="15" font-weight="650" text-anchor="middle">
+      <rect x="78" y="282" width="248" height="39" rx="19.5" fill="#ffffff" fill-opacity=".11" stroke="#ffffff" stroke-opacity=".18"/>
+      <text x="202" y="307" fill="#fff">INTERSPEECH 2026 · ORAL</text>
+      <rect x="342" y="282" width="180" height="39" rx="19.5" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee" stroke-opacity=".5"/>
+      <text x="432" y="307" fill="#a5f3fc">DYNAMIC LoRA</text>
+      <rect x="538" y="282" width="194" height="39" rx="19.5" fill="#fb923c" fill-opacity=".12" stroke="#fb923c" stroke-opacity=".5"/>
+      <text x="635" y="307" fill="#fed7aa">DISTILLATION</text>
     </g>
   </g>
 </svg>
