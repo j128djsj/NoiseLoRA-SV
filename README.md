@@ -150,12 +150,14 @@ If `--snr` is omitted, evaluation runs the configured SNR list automatically. Se
 
 | Path | Purpose |
 | --- | --- |
-| `models/` | ECAPA-TDNN, CRN, MS-NRH, MAGF, and noise-conditioned LoRA modules |
-| `datasets/` | VoxCeleb loading, noise sampling, cropping, and audio preprocessing |
-| `losses/` | AAM-Softmax, masked InfoNCE distillation, and noise reconstruction loss |
+| `src/noiselora_sv/models/` | ECAPA-TDNN, CRN, MS-NRH, MAGF, and noise-conditioned LoRA modules |
+| `src/noiselora_sv/data/` | VoxCeleb loading, noise sampling, cropping, and audio preprocessing |
+| `src/noiselora_sv/losses/` | AAM-Softmax, masked InfoNCE distillation, and noise reconstruction loss |
+| `src/noiselora_sv/training/` | Task orchestration, data loading, logging, optimization, and scheduling |
+| `src/noiselora_sv/utils/` | Configuration, checkpoints, metrics, summaries, and reproducibility helpers |
 | `configs/` | Baseline and NoiseLoRA-SV experiment configurations |
 | `docs/` | Data preparation and reproduction guidance |
-| `tests/` | Forward/backward, gradient, checkpoint, data, and evaluation tests |
+| `tests/` | Forward/backward, gradient, checkpoint, data, CLI, and evaluation tests |
 | `assets/paper/` | Selected architecture figures and experimental tables from the manuscript |
 
 ## Reproduction notes

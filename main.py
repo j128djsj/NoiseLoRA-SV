@@ -1,7 +1,9 @@
 import argparse
+import sys
+from pathlib import Path
 
-from task import NoiseLoRASVTask
-from utils import load_config
+ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / "src"))
 
 
 def parse_args():
@@ -59,6 +61,9 @@ def validate_args(args, cfg):
 
 def main():
     args = parse_args()
+    from noiselora_sv.training.task import NoiseLoRASVTask
+    from noiselora_sv.utils.config import load_config
+
     cfg = load_config(args.config)
     validate_args(args, cfg)
     task = NoiseLoRASVTask(cfg, mode=args.mode, resume=args.resume, pretrained_eval=args.pretrained_eval)

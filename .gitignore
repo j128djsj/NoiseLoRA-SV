@@ -52,14 +52,12 @@ datasets-local/
 *.ckpt
 *.model
 checkpoints/
-pretrained/checkpoints/
 
 # Training outputs
 outputs/
 runs/
 wandb/
 tensorboard/
-logger/runs/
 logs/
 *.log
 *_score.txt
