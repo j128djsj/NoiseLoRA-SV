@@ -37,7 +37,7 @@ NoiseLoRA-SV is a dynamic, instance-adaptive framework for speaker verification 
 ## Architecture
 
 <p align="center">
-  <img src="assets/paper/architecture-overview.png" width="100%" alt="NoiseLoRA-SV architecture from the paper">
+  <img src="assets/paper/architecture-overview.svg" width="100%" alt="NoiseLoRA-SV architecture from the paper">
 </p>
 
 The noisy utterance is processed by two coupled branches. A CRN reconstructs the noise and produces hierarchical noise features, while an ECAPA-TDNN speaker encoder receives dynamic Global and Hierarchical Noise-Conditioned LoRA updates. The frozen clean teacher and reconstruction decoder are used for training supervision; the adapted speaker branch produces the verification embedding.
@@ -45,7 +45,7 @@ The noisy utterance is processed by two coupled branches. A CRN reconstructs the
 ### Noise-aware adaptation modules
 
 <p align="center">
-  <img src="assets/paper/module-details.png" width="820" alt="MS-NRH, MAGF, and HNC module details from the paper">
+  <img src="assets/paper/module-details.svg" width="820" alt="MS-NRH, MAGF, and HNC module details from the paper">
 </p>
 
 - **MS-NRH + MAGF:** aligns and fuses encoder features from E2, E3, and E4 into local noise features while E4 also yields a global noise embedding.
@@ -56,7 +56,7 @@ The noisy utterance is processed by two coupled branches. A CRN reconstructs the
 <summary><strong>View the exact architecture configuration from the paper</strong></summary>
 <br>
 <p align="center">
-  <img src="assets/paper/architecture-table.png" width="760" alt="Exact NoiseLoRA-SV architecture table from the paper">
+  <img src="assets/paper/architecture-table.svg" width="760" alt="Exact NoiseLoRA-SV architecture table from the paper">
 </p>
 </details>
 
@@ -67,7 +67,7 @@ All values below are reported in the paper. The displayed figures are faithful c
 ### Seen-noise robustness
 
 <p align="center">
-  <img src="assets/paper/seen-noise-results.png" width="100%" alt="Original paper table for seen-noise results and ablations">
+  <img src="assets/paper/seen-noise-results.svg" width="100%" alt="Original paper table for seen-noise results and ablations">
 </p>
 
 NoiseLoRA-SV obtains the best average EER in the paper's seen-noise evaluation while retaining a 1.70% clean EER. The ablations isolate the contribution of distillation, explicit noise reconstruction, hierarchical placement, and dynamic conditioning.
@@ -75,7 +75,7 @@ NoiseLoRA-SV obtains the best average EER in the paper's seen-noise evaluation w
 ### Unseen-noise generalization and noise modeling
 
 <p align="center">
-  <img src="assets/paper/unseen-noise-results.png" width="760" alt="Original paper Tables 3 and 4 for unseen-noise generalization and explicit noise modeling">
+  <img src="assets/paper/unseen-noise-results.svg" width="760" alt="Original paper Tables 3 and 4 for unseen-noise generalization and explicit noise modeling">
 </p>
 
 Table 3 reports out-of-domain generalization on NonSpeech100: NoiseLoRA-SV reaches **3.61% average EER** and gives the best result at every tested SNR from 0 to 20 dB. Table 4 shows that explicit noise reconstruction outperforms noise-attribute estimation on both seen and unseen conditions.
@@ -83,7 +83,7 @@ Table 3 reports out-of-domain generalization on NonSpeech100: NoiseLoRA-SV reach
 ### Cross-backbone applicability
 
 <p align="center">
-  <img src="assets/paper/cross-backbone-results.png" width="760" alt="Original paper table for cross-backbone applicability">
+  <img src="assets/paper/cross-backbone-results.svg" width="760" alt="Original paper table for cross-backbone applicability">
 </p>
 
 The same adaptation idea improves ECAPA-TDNN, HuBERT Base, and WavLM Base+, showing that the method is not tied to one speaker encoder family.
