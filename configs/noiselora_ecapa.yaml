@@ -11,8 +11,8 @@ paths:
   unseen_noise_root: ""
   teacher_checkpoint: ""
   student_checkpoint: ""
-  checkpoint_dir: pretrained/checkpoints
-  log_dir: logger/runs
+  checkpoint_dir: outputs/checkpoints
+  log_dir: outputs/logs
 
 audio:
   sample_rate: 16000
