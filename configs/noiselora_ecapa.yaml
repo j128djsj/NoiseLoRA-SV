@@ -1,0 +1,89 @@
+seed: 0
+device: auto
+
+paths:
+  train_root: ""
+  train_list: ""
+  test_root: ""
+  trials: ""
+  musan_train_root: ""
+  musan_test_root: ""
+  unseen_noise_root: ""
+  teacher_checkpoint: ""
+  student_checkpoint: ""
+  checkpoint_dir: pretrained/checkpoints
+  log_dir: logger/runs
+
+audio:
+  sample_rate: 16000
+  crop_seconds: 3.0
+  n_fft: 512
+  win_length_ms: 25
+  hop_length_ms: 10
+  n_mels: 80
+  f_min: 20.0
+  f_max: 7600.0
+  preemphasis: 0.97
+  log_eps: 0.000001
+  mean_norm: true
+  specaugment:
+    enabled: true
+    freq_mask_width: [0, 8]
+    time_mask_width: [0, 10]
+
+model:
+  name: noiselora_sv
+  use_noiselora: true
+  use_teacher: true
+  channels: 1024
+  embedding_dim: 192
+  noise_dim: 128
+  crn:
+    base_channels: 32
+    rnn_channels: 64
+    rnn_hidden: 256
+  lora:
+    rank: 4
+    alpha: 8
+    hyper_hidden: 256
+    init_scale: 0.001
+    gate_hidden: 64
+
+loss:
+  n_classes: 1211
+  aam_margin: 0.2
+  aam_scale: 30
+  infonce_temperature: 0.07
+  speaker_weight: 1.0
+  distill_weight: 1.0
+  noise_weight: 0.1
+
+optimizer:
+  name: adam
+  lr: 0.001
+  weight_decay: 0.00002
+  speaker_lr_scale: 0.1
+
+scheduler:
+  name: exponential
+  gamma: 0.97
+
+training:
+  epochs: 200
+  batch_size: 300
+  num_workers: 4
+  samples_per_speaker: 2
+  # Paper setting: every training crop is dynamically mixed with MUSAN noise.
+  augment_prob: 1.0
+  snr_range: [0.0, 20.0]
+  noise_types: [babble, music, noise]
+  babble_sources: 3
+  amp: false
+
+evaluation:
+  batch_size: 1
+  num_workers: 2
+  seed: 0
+  snrs: [0, 5, 10, 15, 20]
+  seen_noise_types: [babble, music, noise]
+  babble_sources: 3
