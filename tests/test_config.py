@@ -1,6 +1,6 @@
 import pytest
 
-from utils.config import validate_config
+from noiselora_sv.utils.config import validate_config
 
 
 def _cfg(**kwargs):

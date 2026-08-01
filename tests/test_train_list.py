@@ -1,7 +1,7 @@
 import pytest
 
-from datasets.voxceleb import VoxCelebTrainDataset
-from datasets.voxceleb import VoxCelebTrialsDataset
+from noiselora_sv.data.voxceleb import VoxCelebTrainDataset
+from noiselora_sv.data.voxceleb import VoxCelebTrialsDataset
 
 
 def test_train_list_speaker_then_relative_path(tmp_path):

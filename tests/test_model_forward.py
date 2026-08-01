@@ -1,8 +1,8 @@
 import torch
 
-from losses import NoiseLoRASVLoss
-from models import GlobalNoiseConditionedLoRA, HNCNoiseConditionedLoRA, build_model
-from task import NoiseLoRASVTask
+from noiselora_sv.losses import NoiseLoRASVLoss
+from noiselora_sv.models import GlobalNoiseConditionedLoRA, HNCNoiseConditionedLoRA, build_model
+from noiselora_sv.training.task import NoiseLoRASVTask
 
 
 def tiny_cfg(use_noiselora=True):

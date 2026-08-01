@@ -1,6 +1,6 @@
 import pytest
 
-from utils.metrics import compute_eer
+from noiselora_sv.utils.metrics import compute_eer
 
 
 def test_eer_perfectly_separated_scores():

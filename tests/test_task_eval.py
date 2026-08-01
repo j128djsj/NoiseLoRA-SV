@@ -1,9 +1,9 @@
 import pytest
 import torch
 
-import task as task_module
-from DatasetLoader import build_eval_loader
-from task import NoiseLoRASVTask
+import noiselora_sv.training.task as task_module
+from noiselora_sv.training.data import build_eval_loader
+from noiselora_sv.training.task import NoiseLoRASVTask
 
 
 class DummyLogger:

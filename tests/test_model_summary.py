@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from utils.model_summary import summarize_model_parameters
+from noiselora_sv.utils.model_summary import summarize_model_parameters
 
 
 class TinyCRN(nn.Module):

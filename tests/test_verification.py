@@ -1,8 +1,8 @@
-from utils.verification import scan_runtime_files
+from tests.helpers.verification import scan_runtime_files
 
 
 def test_scanner_does_not_report_its_own_patterns():
-    hits = [hit for hit in scan_runtime_files(".") if hit["file"].endswith("utils/verification.py")]
+    hits = [hit for hit in scan_runtime_files(".") if hit["file"].endswith("helpers/verification.py")]
     assert hits == []
 
 

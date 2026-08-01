@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from datasets.noise import MusanNoiseMixer, _mix_at_snr
+from noiselora_sv.data.noise import MusanNoiseMixer, _mix_at_snr
 
 
 def test_peak_scaled_mix_is_clean_plus_noise():

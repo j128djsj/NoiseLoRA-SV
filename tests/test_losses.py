@@ -2,7 +2,7 @@ import pytest
 import torch
 import torch.nn.functional as F
 
-from losses import AAMSoftmaxLoss, NoiseLoRASVLoss, SupervisedMaskedInfoNCELoss
+from noiselora_sv.losses import AAMSoftmaxLoss, NoiseLoRASVLoss, SupervisedMaskedInfoNCELoss
 
 
 def test_aam_softmax_is_finite():

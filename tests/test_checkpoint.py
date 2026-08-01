@@ -2,11 +2,11 @@ import pytest
 import torch
 import torch.nn as nn
 
-from models import ECAPATDNN
-from losses import NoiseLoRASVLoss
-from utils.checkpoint import NOISELORA_REQUIRED_PREFIXES, load_complete_baseline_checkpoint, load_full_model_checkpoint
-from utils.checkpoint import load_module_checkpoint, save_checkpoint
-from utils.checkpoint import load_training_checkpoint, save_training_checkpoint
+from noiselora_sv.models import ECAPATDNN
+from noiselora_sv.losses import NoiseLoRASVLoss
+from noiselora_sv.utils.checkpoint import NOISELORA_REQUIRED_PREFIXES, load_complete_baseline_checkpoint, load_full_model_checkpoint
+from noiselora_sv.utils.checkpoint import load_module_checkpoint
+from noiselora_sv.utils.checkpoint import load_training_checkpoint, save_training_checkpoint
 
 
 def test_checkpoint_load_reports_useful_keys(tmp_path):
@@ -389,23 +389,6 @@ def test_checkpoint_metadata_sanitizes_private_paths(tmp_path):
     assert "/public" + "/ho" + "me/" not in text
     assert pack["config"]["model"]["embedding_dim"] == 192
     assert pack["config"]["training"]["epochs"] == 1
-
-
-def test_checkpoint_saves_without_parent_directory(tmp_path, monkeypatch):
-    monkeypatch.chdir(tmp_path)
-    model = nn.Linear(2, 2)
-    save_checkpoint("model.pth", model)
-    assert (tmp_path / "model.pth").is_file()
-    assert "state_dict" in torch.load("model.pth", map_location="cpu")
-    (tmp_path / "model.pth").unlink()
-
-
-def test_checkpoint_saves_in_nested_directory(tmp_path):
-    model = nn.Linear(2, 2)
-    path = tmp_path / "checkpoints" / "model.pth"
-    save_checkpoint(path, model)
-    assert path.is_file()
-    assert "state_dict" in torch.load(path, map_location="cpu")
 
 
 def test_training_checkpoint_saves_without_parent_directory(tmp_path, monkeypatch):

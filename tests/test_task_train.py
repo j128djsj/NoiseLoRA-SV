@@ -1,7 +1,7 @@
 from types import SimpleNamespace
 
-import task as task_module
-from task import NoiseLoRASVTask
+import noiselora_sv.training.task as task_module
+from noiselora_sv.training.task import NoiseLoRASVTask
 
 
 class DummyLogger:
