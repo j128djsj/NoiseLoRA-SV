@@ -64,12 +64,6 @@ The noisy utterance is processed by two coupled branches. A CRN reconstructs the
 
 All values below are reported in the paper. The displayed figures are faithful crops of the original manuscript tables; the numerical content has not been redrawn or modified.
 
-| Evaluation condition | EER ↓ |
-| --- | ---: |
-| Clean VoxCeleb1 | **1.70%** |
-| Seen MUSAN noise, average | **3.05%** |
-| Unseen NonSpeech100 noise, average | **3.61%** |
-
 ### Seen-noise robustness
 
 <p align="center">
@@ -78,13 +72,13 @@ All values below are reported in the paper. The displayed figures are faithful c
 
 NoiseLoRA-SV obtains the best average EER in the paper's seen-noise evaluation while retaining a 1.70% clean EER. The ablations isolate the contribution of distillation, explicit noise reconstruction, hierarchical placement, and dynamic conditioning.
 
-### Unseen-noise generalization
+### Unseen-noise generalization and noise modeling
 
 <p align="center">
-  <img src="assets/paper/unseen-noise-results.png" width="760" alt="Original paper table for unseen-noise generalization on NonSpeech100">
+  <img src="assets/paper/unseen-noise-results.png" width="760" alt="Original paper Tables 3 and 4 for unseen-noise generalization and explicit noise modeling">
 </p>
 
-On the out-of-domain NonSpeech100 evaluation, NoiseLoRA-SV reaches **3.61% average EER** and gives the best result at every tested SNR from 0 to 20 dB.
+Table 3 reports out-of-domain generalization on NonSpeech100: NoiseLoRA-SV reaches **3.61% average EER** and gives the best result at every tested SNR from 0 to 20 dB. Table 4 shows that explicit noise reconstruction outperforms noise-attribute estimation on both seen and unseen conditions.
 
 ### Cross-backbone applicability
 
