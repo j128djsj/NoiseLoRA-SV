@@ -182,22 +182,7 @@ The ECAPA-TDNN backbone is adapted from [TaoRuijie/ECAPA-TDNN](https://github.co
 
 ## Publication status
 
-NoiseLoRA-SV has been accepted for an **oral presentation at Interspeech 2026**. Because the conference has not yet taken place, there is currently no official proceedings page, DOI, or indexed online record to link. This section and `CITATION.cff` will be updated when the proceedings are published.
-
-## Citation
-
-Until the final proceedings metadata is available, please use:
-
-```bibtex
-@inproceedings{gao2026noiselora,
-  title     = {NoiseLoRA-SV: Hierarchical Noise-Conditioned Adaptation with
-               Embedding Distillation for Robust Speaker Verification},
-  author    = {Gao, Dai and Jiang, Chen and Liu, Sizhe and Zhang, Peng},
-  booktitle = {Proceedings of Interspeech},
-  year      = {2026},
-  note      = {Accepted oral presentation; proceedings metadata forthcoming}
-}
-```
+NoiseLoRA-SV has been accepted for an **oral presentation at Interspeech 2026**. Because the conference has not yet taken place, there is currently no official proceedings page, DOI, or indexed online record to link. The repository will be updated when the proceedings are published.
 
 ## License
 
