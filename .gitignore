@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+
+# Test and analysis caches
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local references and agent files
+reference/
+.agents/
+AGENTS.md
+docs/migration_plan.md
+
+# Datasets and local data
+data/
+datasets-local/
+*.wav
+*.flac
+*.mp3
+*.m4a
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.ckpt
+*.model
+checkpoints/
+pretrained/checkpoints/
+
+# Training outputs
+outputs/
+runs/
+wandb/
+tensorboard/
+logger/runs/
+logs/
+*.log
+*_score.txt
+
+# Debug and generated files
+nan_dumps/
+clean_specs_png/
+noise_specs_png/
+tmp/
+temp/
+
+# Local environment records
+requirements-lock.txt
+environment.yml
+
+# Jupyter
+.ipynb_checkpoints/

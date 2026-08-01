@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the NoiseLoRA-SV paper."
+title: "NoiseLoRA-SV"
+type: software
+repository-code: "https://github.com/j128djsj/NoiseLoRA-SV"
+license: MIT
+abstract: "PyTorch implementation of hierarchical noise-conditioned adaptation with embedding distillation for robust speaker verification."
+authors:
+  - family-names: Gao
+    given-names: Dai
+  - family-names: Jiang
+    given-names: Chen
+  - family-names: Liu
+    given-names: Sizhe
+  - family-names: Zhang
+    given-names: Peng
+preferred-citation:
+  type: conference-paper
+  title: "NoiseLoRA-SV: Hierarchical Noise-Conditioned Adaptation with Embedding Distillation for Robust Speaker Verification"
+  authors:
+    - family-names: Gao
+      given-names: Dai
+    - family-names: Jiang
+      given-names: Chen
+    - family-names: Liu
+      given-names: Sizhe
+    - family-names: Zhang
+      given-names: Peng
+  conference:
+    name: "Interspeech"
+  year: 2026
+  notes: "Accepted oral presentation; official proceedings metadata forthcoming because the conference has not yet taken place."

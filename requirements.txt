@@ -1,0 +1,8 @@
+torch
+torchaudio
+numpy
+scipy
+soundfile
+PyYAML
+tqdm
+pytest
