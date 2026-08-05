@@ -22,7 +22,7 @@
 </p>
 
 > [!IMPORTANT]
-> **Publication status:** Accepted as an **Oral Presentation at Interspeech 2026**. The conference has not yet taken place, so the paper is not yet listed in the official online proceedings. The public paper link and final proceedings metadata will be added after release.
+> **Publication status:** Accepted as an **Oral Presentation at Interspeech 2026**. The conference has not yet taken place, so the paper is not yet listed in the official online proceedings. The public paper link and final proceedings metadata will be added once they become available.
 
 NoiseLoRA-SV is a dynamic, instance-adaptive framework for speaker verification in non-stationary noise. It reconstructs noise explicitly, extracts global and local noise representations, generates LoRA weights on the fly, and aligns noisy speaker embeddings with a frozen clean teacher.
 
